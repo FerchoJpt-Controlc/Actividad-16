@@ -42,3 +42,52 @@ class Registro_libro(Libro):
 class Gestiones:
     def __init__(self):
         self.usuarios = {}
+
+def Menu():
+    opcion = 0
+
+    while opcion != 5:
+        print("-_M E N U_-")
+        print("1. AGREGAR LIBRO")
+        print("2. AGREGAR USUSARIO")
+        print("3. PREWSTAR LIBRO")
+        print("4. DEVOLVER LIBRO")
+        print("5. SALIR")
+        print("//si decea salir de adentro de alguna opcion escriba 'salir' ")
+
+        try:
+            opcion_input = salir("\nIngrese su opción: ")
+            if opcion_input is None:
+                continue
+
+            if opcion_input.isdigit():
+                opcion = int(opcion_input)
+
+                if opcion == 1:
+                    print("")
+
+                elif opcion == 2:
+                    print("")
+
+                elif opcion == 3:
+                    print("")
+
+                elif opcion == 4:
+                    print("")
+
+                elif opcion == 5:
+                    print("\nAdiós, regrese pronto CHAUUU...")
+                else:
+                    print("\nOpción inválida, vuelva a intentar")
+            else:
+                print("\nError: ingreso de datos no numéricos")
+                opcion = 0
+
+        except Exception as e:
+            print(f"\nOcurrió un error inesperado: {e}")
+
+        if opcion != 5:
+            input("\nPresione ENTER para continuar...")
+
+
+Menu()
